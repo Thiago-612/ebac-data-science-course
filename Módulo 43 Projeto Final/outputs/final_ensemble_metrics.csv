@@ -1,0 +1,2 @@
+modelo_final,politica_decisao,threshold,accuracy,precision_fraude,recall_fraude,f1_fraude,roc_auc,average_precision,tn,fp,fn,tp,taxa_falso_positivo,taxa_falso_negativo,custo_total
+Custom Risk-Oriented Ensemble,Política - Apenas Alto Risco,,0.9993504441557529,0.7961165048543689,0.8367346938775511,0.8159203980099502,0.9731988532610567,0.8273549238226917,56843,21,16,82,0.0003693021947101857,0.16326530612244897,181

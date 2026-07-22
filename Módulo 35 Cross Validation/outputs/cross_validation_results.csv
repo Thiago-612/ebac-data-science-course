@@ -1,0 +1,2 @@
+model,features_used,accuracy_mean,accuracy_std,precision_mean,precision_std,recall_mean,recall_std,f1_score_mean,f1_score_std,roc_auc_mean,roc_auc_std
+Baseline - Random Forest - Top Features,"TVOC[ppb], Pressure[hPa], Raw_Ethanol, Humidity[%], NC0.5, Raw_H2, Temperature[C], eCO2[ppm]",0.9999361328436851,0.00010591169696167789,0.9999553222377985,8.935552509978597e-05,0.9999553172475425,0.00013404825737264314,0.9999553122547773,7.411000557837842e-05,0.9999999624934925,8.005294211635077e-08

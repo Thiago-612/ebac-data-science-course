@@ -1,0 +1,16 @@
+6) Diferencie, com suas palavras, a utilidade do SQL e do Python para Ciência de Dados
+
+O SQL é especialmente útil para consultar, filtrar, agregar e organizar dados diretamente no banco, de forma rápida e eficiente, principalmente quando se trabalha com grandes volumes de dados.
+O Python, por sua vez, é mais flexível e poderoso para análises exploratórias, estatísticas, modelagem, automação e visualização, sendo ideal para etapas mais avançadas da ciência de dados, porém mais lento para consultas/filtragens...
+
+7) Diferencie banco de dados relacionais de não relacionais
+
+Bancos de dados relacionais armazenam dados em tabelas estruturadas, com esquema bem definido, relações entre entidades e uso intenso de chaves e SQL, sendo indicados para dados consistentes e transacionais.
+Já bancos de dados não relacionais (NoSQL) lidam melhor com dados semi-estruturados ou não estruturados, possuem esquemas flexíveis e são mais escaláveis horizontalmente.
+Enquanto bancos relacionais priorizam integridade e consistência, os não relacionais priorizam flexibilidade e performance em grandes volumes de dados distribuídos.
+
+8) O SQL pode ser mais prático que o Python para consultas rápidas? Justifique
+
+Sim, o SQL costuma ser mais prático para consultas rápidas, pois permite acessar e processar os dados diretamente no banco, evitando etapas intermediárias de carregamento.
+Em cenários de consultas simples, filtros ou agregações, o SQL é mais eficiente e objetivo.
+Já o Python se torna mais adequado quando a análise exige lógica mais complexa, estatística, visualizações ou integração com modelos de machine learning, sendo comum o uso complementar das duas linguagens.

@@ -1,0 +1,5 @@
+model,accuracy,precision,recall,f1_score,roc_auc
+Random Forest - All Features,1.0,1.0,1.0,1.0,1.0
+Random Forest - Top Features,0.9999201660546064,0.9998882931188561,1.0,0.999944143439647,0.9999999374996582
+Baseline RF - All Features,1.0,1.0,1.0,1.0,1.0
+GridSearch RF,1.0,1.0,1.0,1.0,1.0

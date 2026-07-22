@@ -1,0 +1,13 @@
+﻿feature,importance
+alcohol_x_sulphates,0.28244797926166304
+alcohol_density_ratio,0.1826869896873005
+acid_ratio,0.12070488235932247
+log_total_sulfur_dioxide,0.10023739369032704
+volatile acidity,0.07595515269991293
+sulphates_chlorides_ratio,0.07484225633043907
+citric acid,0.044487030024797994
+alcohol_x_volatile_acidity,0.037869102314754474
+sqrt_sulphates,0.028353780302093307
+sulphates,0.027970860030586603
+alcohol,0.0225676468476004
+alcohol_bin_q,0.0018769264512022606

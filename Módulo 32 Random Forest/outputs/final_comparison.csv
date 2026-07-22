@@ -1,0 +1,3 @@
+﻿candidate,model_name,cv_f1_macro,test_f1_macro
+Best_Base_Model,RandomForest_Base,0.322898417603047,0.4599393951288326
+Tuned_RandomForest,Tuned_RandomForest,0.3751840772480462,0.4356592329006122

@@ -1,0 +1,898 @@
+from __future__ import annotations
+import warnings
+from pathlib import Path
+from typing import Iterable
+import numpy as np
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+from sklearn.cluster import KMeans
+from sklearn.metrics import (
+    calinski_harabasz_score,
+    davies_bouldin_score,
+    silhouette_score,
+)
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
+warnings.filterwarnings("ignore", category=FutureWarning)
+
+pd.set_option("display.max_columns", None)
+pd.set_option("display.width", None)
+pd.set_option("display.max_colwidth", None)
+
+
+def get_project_paths() -> tuple[Path, Path, Path]:
+    """
+    EN: Return project root, data dir, and outputs dir.
+    PT: Retorna a raiz do projeto, pasta de dados e pasta de saída.
+    """
+    project_root = Path(__file__).resolve().parents[1]
+    data_dir = project_root / "data"
+    outputs_dir = project_root / "outputs"
+    outputs_dir.mkdir(parents=True, exist_ok=True)
+    return project_root, data_dir, outputs_dir
+
+
+def load_data() -> pd.DataFrame:
+    """
+    EN: Load the dataset.
+    PT: Carrega o dataset.
+    """
+    _, data_dir, _ = get_project_paths()
+    df = pd.read_csv(data_dir / "Mall_Customers.csv")
+    return df
+
+
+def describe_data(df: pd.DataFrame) -> None:
+    """
+    EN: Show general dataset overview.
+    PT: Exibe visão geral do dataset.
+    """
+    print("\n==== VISÃO GERAL DOS DADOS ====\n")
+    print(df.head().to_string())
+
+    print("\n==== SHAPE ====\n")
+    print(df.shape)
+
+    print("\n==== TIPOS DE DADOS ====\n")
+    print(df.dtypes)
+
+    print("\n==== VALORES NULOS ====\n")
+    print(df.isnull().sum())
+
+    print("\n==== ANÁLISE DOS DADOS ====\n")
+    print(df.describe().to_string())
+
+
+def prepare_data(df: pd.DataFrame):
+    """
+    Prepara dados para KMeans.
+
+    Saída:
+    - DataFrame totalmente codificado e padronizado
+    - legenda das variáveis
+
+    Não mantém colunas originais.
+    """
+
+    df_prep = df.copy()
+
+    # =========================================================
+    # 1. Remover CustomerID
+    # =========================================================
+    if "CustomerID" in df_prep.columns:
+        df_prep = df_prep.drop(columns=["CustomerID"])
+
+    # =========================================================
+    # 2. One-hot encoding em Gender
+    # =========================================================
+    gender_dummies = pd.get_dummies(
+        df_prep["Gender"],
+        prefix="Gender",
+        dtype=int,
+        drop_first=True
+    )
+
+    # =========================================================
+    # 3. Criar faixas ordenadas
+    # =========================================================
+
+    # Age
+    """
+    Faixa de idades dividida em jovens, adultos e idosos fragmenta muito os clusters.
+    Número de bins reduzido para três valores.
+    """
+    df_prep["Age_Faixa"] = pd.cut(
+        df_prep["Age"],
+        bins=[18, 50, 70],
+        labels=["Até 50", "Acima de 50"],
+        include_lowest=True,
+        ordered=True
+    )
+
+    # Income
+    df_prep["Income_Faixa"] = pd.cut(
+        df_prep["Annual Income (k$)"],
+        bins=[14, 55, 95, 140],
+        labels=["Baixa", "Média", "Alta"],
+        ordered=True
+    )
+
+    # Spending Score
+    df_prep["Score_Faixa"] = pd.cut(
+        df_prep["Spending Score (1-100)"],
+        bins=[1, 33, 66, 100],
+        labels=["Baixo", "Médio", "Alto"],
+        ordered=True
+    )
+
+    # =========================================================
+    # 4. Codificar mantendo ordem
+    # =========================================================
+    df_encoded = pd.DataFrame({
+        "Age": df_prep["Age_Faixa"].cat.codes,
+        "Income": df_prep["Income_Faixa"].cat.codes,
+        "Score": df_prep["Score_Faixa"].cat.codes
+    })
+
+    # juntar com gender
+    df_encoded = pd.concat([df_encoded, gender_dummies], axis=1)
+
+    # =========================================================
+    # 5. Legenda (para gráficos)
+    # =========================================================
+    legends = {
+        "Age": {0: "18/50", 1: "50+"},
+        "Income": {0: "Baixa", 1: "Média", 2: "Alta"},
+        "Score": {0: "Baixo", 1: "Médio", 2: "Alto"}
+    }
+
+    # =========================================================
+    # 6. Padronizar
+    # =========================================================
+    scaler = StandardScaler()
+    df_scaled = scaler.fit_transform(df_encoded)
+
+    df_scaled = pd.DataFrame(
+        df_scaled,
+        columns=df_encoded.columns,
+        index=df_encoded.index
+    )
+
+    return df_scaled, legends, scaler
+
+
+def prepare_data_2(df: pd.DataFrame):
+    """
+    Prepara dados contínuos para KMeans.
+
+    Etapas:
+    - remove CustomerID
+    - aplica one-hot encoding em Gender
+    - mantém Age, Annual Income (k$) e Spending Score (1-100) contínuos
+    - padroniza todas as colunas finais
+
+    Returns
+    -------
+    df_scaled : pd.DataFrame
+        DataFrame final padronizado.
+    legends : dict
+        Dicionário de legenda das variáveis.
+    scaler : StandardScaler
+        Objeto scaler ajustado.
+    """
+
+    df_prep = df.copy()
+
+    # =========================================================
+    # 1. Remover CustomerID
+    # =========================================================
+    if "CustomerID" in df_prep.columns:
+        df_prep = df_prep.drop(columns=["CustomerID"])
+
+    # =========================================================
+    # 2. One-hot encoding em Gender
+    # =========================================================
+    gender_dummies = pd.get_dummies(
+        df_prep["Gender"],
+        prefix="Gender",
+        dtype=int,
+        drop_first=True
+    )
+
+    # =========================================================
+    # 3. Montar dataframe final contínuo
+    # =========================================================
+    df_final = pd.DataFrame({
+        "Age": df_prep["Age"],
+        "Income": df_prep["Annual Income (k$)"],
+        "Score": df_prep["Spending Score (1-100)"]
+    })
+
+    df_final = pd.concat([df_final, gender_dummies], axis=1)
+
+    # =========================================================
+    # 4. Legendas
+    # =========================================================
+    legends = {
+        "Age": "Idade do cliente",
+        "Income": "Renda anual (k$)",
+        "Score": "Spending Score (1-100)",
+        "Gender_Male": {
+            0: "Female",
+            1: "Male"
+        }
+    }
+
+    # =========================================================
+    # 5. Padronizar
+    # =========================================================
+    scaler = StandardScaler()
+    df_scaled_array = scaler.fit_transform(df_final)
+
+    df_cont = pd.DataFrame(
+        df_scaled_array,
+        columns=df_final.columns,
+        index=df_final.index
+    )
+
+    return df_cont, legends, scaler
+
+
+def plot_scatter_matrix(df: pd.DataFrame, title: str, color: str | None = None):
+
+    fig = px.scatter_matrix(
+        df,
+        dimensions=df.columns,
+        color=color,
+        title=title,
+        opacity=0.75,
+    )
+
+    fig.update_traces(diagonal_visible=False, showupperhalf=False)
+    fig.update_layout(width=1000, height=900)
+    fig.show()
+
+
+def decode_scaled_data(df_scaled, scaler, legends):
+
+    df_original = scaler.inverse_transform(df_scaled)
+    df_original = pd.DataFrame(df_original, columns=df_scaled.columns)
+
+    df_original = df_original.round(0)
+
+    df_decoded = df_original.copy()
+
+    for col, mapping in legends.items():
+        if col in df_decoded.columns and isinstance(mapping, dict):
+            df_decoded[col] = df_decoded[col].round(0).astype(int).map(mapping)
+
+    return df_decoded
+
+
+def fit_kmeans(X_scaled: np.ndarray, n_clusters: int, random_state: int = 42) -> KMeans:
+    """
+    Ajusta o modelo K-means.
+    """
+    model = KMeans(
+        n_clusters=n_clusters,
+        init="k-means++",
+        n_init=20,
+        max_iter=300,
+        random_state=random_state,
+    )
+    model.fit(X_scaled)
+    return model
+
+
+def evaluate_kmeans_range(
+    X_scaled: np.ndarray,
+    k_values: Iterable[int],
+    random_state: int = 42,
+) -> pd.DataFrame:
+    """
+    Avalia vários valores de K usando:
+    - Inércia (cotovelo) - Compactação do cluster - menor valor - Problemático, pois sempre vai diminuir ao aumentar a quantidade de clusters.
+    - Silhouette Score - Separação entre os clusters - maior valor - Validação principal
+    - Calinski-Harabasz - Separação vs compactação - maior valor - Confirmação
+    - Davies-Bouldin - Similaridade entre clusters - menor valor - Confirmação adicional
+    """
+    results = []
+
+    for k in k_values:
+        model = fit_kmeans(X_scaled, n_clusters=k, random_state=random_state)
+        labels = model.labels_
+
+        results.append(
+            {
+                "k": k,
+                "Inércia": model.inertia_,
+                "Silhouette": silhouette_score(X_scaled, labels),
+                "Calinski_Harabasz": calinski_harabasz_score(X_scaled, labels),
+                "Davies_Bouldin": davies_bouldin_score(X_scaled, labels),
+            }
+        )
+
+    return pd.DataFrame(results)
+
+
+def plot_elbow_and_validation(
+    results: pd.DataFrame,
+    title_elbow: str = "Método do Cotovelo",
+    title_validation: str = "Validação Interna dos Clusters"
+) -> None:
+    """
+    Plota:
+    - Método do cotovelo
+    - Métricas de validação interna
+
+    """
+
+    # =========================
+    # ELBOW
+    # =========================
+    fig = go.Figure()
+
+    fig.add_trace(
+        go.Scatter(
+            x=results["k"],
+            y=results["Inércia"],
+            mode="lines+markers",
+            name="Inércia (Elbow)",
+        )
+    )
+
+    fig.update_layout(
+        title=title_elbow,
+        xaxis_title="Número de clusters (k)",
+        yaxis_title="Inércia",
+        width=900,
+        height=500,
+    )
+
+    fig.show()
+
+    # =========================
+    # VALIDAÇÃO
+    # =========================
+    fig = go.Figure()
+
+    fig.add_trace(
+        go.Scatter(
+            x=results["k"],
+            y=results["Silhouette"],
+            mode="lines+markers",
+            name="Silhouette",
+        )
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=results["k"],
+            y=results["Calinski_Harabasz"],
+            mode="lines+markers",
+            name="Calinski-Harabasz",
+            yaxis="y2",
+        )
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=results["k"],
+            y=results["Davies_Bouldin"],
+            mode="lines+markers",
+            name="Davies-Bouldin",
+            yaxis="y3",
+        )
+    )
+
+    fig.update_layout(
+        title=title_validation,
+        xaxis=dict(title="Número de clusters (k)"),
+        yaxis=dict(title="Silhouette"),
+        yaxis2=dict(
+            title="Calinski-Harabasz",
+            overlaying="y",
+            side="right",
+            showgrid=False,
+        ),
+        yaxis3=dict(
+            title="Davies-Bouldin",
+            anchor="free",
+            overlaying="y",
+            side="right",
+            position=0.95,
+            showgrid=False,
+        ),
+        legend=dict(x=0.01, y=0.99),
+        width=950,
+        height=550,
+    )
+
+    fig.show()
+
+
+def choose_best_k_smart(
+    results: pd.DataFrame,
+    max_reasonable_k: int | None = 5,
+    silhouette_weight: float = 0.35,
+    calinski_weight: float = 0.15,
+    davies_weight: float = 0.15,
+    simplicity_weight: float = 0.35,
+) -> tuple[int, pd.DataFrame]:
+    """
+    Escolhe K combinando métricas internas com penalização mais forte
+    para muitos clusters.
+
+    Escolhe K de forma mais inteligente, combinando:
+    - Silhouette (maior é melhor)
+    - Calinski-Harabasz (maior é melhor)
+    - Davies-Bouldin (menor é melhor)
+    - Simplicidade / penalização para muitos clusters
+    """
+
+    df = results.copy()
+
+    required_cols = ["k", "Silhouette", "Calinski_Harabasz", "Davies_Bouldin"]
+    missing = [col for col in required_cols if col not in df.columns]
+    if missing:
+        raise ValueError(f"Colunas ausentes em results: {missing}")
+
+    def minmax(series: pd.Series) -> pd.Series:
+        s_min = series.min()
+        s_max = series.max()
+        if s_max == s_min:
+            return pd.Series([1.0] * len(series), index=series.index)
+        return (series - s_min) / (s_max - s_min)
+
+    df["silhouette_norm"] = minmax(df["Silhouette"])
+    df["calinski_norm"] = minmax(df["Calinski_Harabasz"])
+    df["davies_norm"] = 1 - minmax(df["Davies_Bouldin"])
+
+    k_min = df["k"].min()
+    k_max = df["k"].max()
+
+    if k_max == k_min:
+        df["simplicity_norm"] = 1.0
+    else:
+        df["simplicity_norm"] = 1 - ((df["k"] - k_min) / (k_max - k_min))
+
+    if max_reasonable_k is not None:
+        penalty = (df["k"] - max_reasonable_k).clip(lower=0)
+
+        if penalty.max() > 0:
+            penalty = penalty / penalty.max()
+            df["simplicity_norm"] = (df["simplicity_norm"] - 0.8 * penalty).clip(lower=0)
+
+    total_weight = (
+        silhouette_weight
+        + calinski_weight
+        + davies_weight
+        + simplicity_weight
+    )
+
+    df["smart_score"] = (
+        silhouette_weight * df["silhouette_norm"]
+        + calinski_weight * df["calinski_norm"]
+        + davies_weight * df["davies_norm"]
+        + simplicity_weight * df["simplicity_norm"]
+    ) / total_weight
+
+    ranked_results = df.sort_values(
+        by=["smart_score", "Silhouette"],
+        ascending=[False, False]
+    ).reset_index(drop=True)
+
+    best_k = int(ranked_results.loc[0, "k"])
+    return best_k, ranked_results
+
+
+def add_cluster_labels(df_scaled: pd.DataFrame, labels: np.ndarray) -> pd.DataFrame:
+    df_clustered = df_scaled.copy()
+    df_clustered["cluster"] = labels.astype(str)
+    return df_clustered
+
+
+def get_centroids_original_scale(model, scaler, columns):
+    centroids_scaled = model.cluster_centers_
+    centroids_original = scaler.inverse_transform(centroids_scaled)
+
+    df_centroids = pd.DataFrame(centroids_original, columns=columns)
+    df_centroids = df_centroids.round(0).astype(int)
+
+    return df_centroids
+
+
+def plot_clusters_with_centroids(
+    df_clustered: pd.DataFrame,
+    centroids_df: pd.DataFrame,
+    x_col: str,
+    y_col: str,
+    cluster_col: str,
+    title: str,
+) -> None:
+    """
+    Plota dispersão dos clusters com centróides em destaque.
+    """
+    fig = px.scatter(
+        df_clustered,
+        x=x_col,
+        y=y_col,
+        color=cluster_col,
+        title=title,
+        opacity=0.75,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=centroids_df[x_col],
+            y=centroids_df[y_col],
+            mode="markers+text",
+            text=[f"C{i}" for i in range(len(centroids_df))],
+            textposition="top center",
+            marker=dict(size=18, symbol="x"),
+            name="Centróides",
+        )
+    )
+
+    fig.update_layout(width=900, height=600)
+    fig.show()
+
+
+def summarize_clusters(df_decoded):
+    #print("\n==== PERFIL DOS CLUSTERS ====\n")
+
+    for cluster in sorted(df_decoded["cluster"].unique()):
+        print(f"\nCluster {cluster}:")
+
+        subset = df_decoded[df_decoded["cluster"] == cluster]
+
+        print("Total:", len(subset))
+
+        for col in ["Age", "Income", "Score"]:
+            print(f"{col}:", subset[col].value_counts().idxmax())
+
+
+def summarize_clusters_advanced(df_original, labels):
+    df_analysis = df_original.copy()
+    df_analysis["cluster"] = labels
+
+    print("\n==== PERFIL AVANÇADO DOS CLUSTERS ====\n")
+
+    for cluster in sorted(df_analysis["cluster"].unique()):
+        subset = df_analysis[df_analysis["cluster"] == cluster]
+
+        print(f"\nCluster {cluster}:")
+        print(f"Total: {len(subset)}")
+
+        for col in ["Age", "Income", "Score"]:
+            print(f"\n{col}:")
+            print(f"  min: {subset[col].min():.1f}")
+            print(f"  mean: {subset[col].mean():.1f}")
+            print(f"  max: {subset[col].max():.1f}")
+
+        if "Gender_Male" in subset.columns:
+            male_pct = subset["Gender_Male"].mean() * 100
+            female_pct = 100 - male_pct
+
+            print("\nSexo:")
+            print(f"  % Male: {male_pct:.1f}")
+            print(f"  % Female: {female_pct:.1f}")
+
+            if male_pct >= 60:
+                dominant_gender = "Predominância Masculina"
+            elif female_pct >= 60:
+                dominant_gender = "Predominância Feminina"
+            else:
+                dominant_gender = "Misto"
+
+            print(f"  Perfil: {dominant_gender}")
+
+
+def name_clusters(df_original, labels):
+    df_analysis = df_original.copy()
+    df_analysis["cluster"] = labels
+
+    cluster_names = {}
+
+    for cluster in sorted(df_analysis["cluster"].unique()):
+        subset = df_analysis[df_analysis["cluster"] == cluster]
+
+        age = subset["Age"].mean()
+        income = subset["Income"].mean()
+        score = subset["Score"].mean()
+
+        if "Gender_Male" in subset.columns:
+            male_pct = subset["Gender_Male"].mean() * 100
+            female_pct = 100 - male_pct
+
+            if male_pct >= 60:
+                gender_label = "Masculino"
+            elif female_pct >= 60:
+                gender_label = "Feminino"
+            else:
+                gender_label = "Misto"
+        else:
+            gender_label = "Sem Gênero"
+
+        # Score
+        if score > 65:
+            score_label = "Alto Consumo"
+        elif score > 40:
+            score_label = "Consumo Médio"
+        else:
+            score_label = "Baixo Consumo"
+
+        # Income
+        if income > 70:
+            income_label = "Alta Renda"
+        elif income > 50:
+            income_label = "Renda Média"
+        else:
+            income_label = "Baixa Renda"
+
+        # Age
+        if age < 30:
+            age_label = "Jovens"
+        elif age < 50:
+            age_label = "Adultos"
+        else:
+            age_label = "Idosos"
+
+        name = f"{age_label} | {income_label} | {score_label} | {gender_label}"
+        cluster_names[cluster] = name
+
+    return cluster_names
+
+
+def plot_pca_clusters(df_scaled, labels):
+    pca = PCA(n_components=2)
+    X_pca = pca.fit_transform(df_scaled)
+
+    df_plot = pd.DataFrame(X_pca, columns=["PC1", "PC2"])
+    df_plot["cluster"] = labels.astype(str)
+
+    fig = px.scatter(
+        df_plot,
+        x="PC1",
+        y="PC2",
+        color="cluster",
+        title="Clusters (PCA 2D)",
+        opacity=0.8
+    )
+
+    fig.update_layout(width=800, height=600)
+    fig.show()
+
+
+def main() -> None:
+    """
+    EN: Main advanced pipeline.
+    PT: Pipeline avançado principal.
+    """
+    _, _, outputs_dir = get_project_paths()
+
+    df = load_data()
+    describe_data(df)
+
+    # =========================================================
+    # 1. PREPARAR DADOS
+    # =========================================================
+    print('\nVERIFICAÇÃO DO DATAFRAME APÓS PREPARAÇÃO: \n')
+    print('Dados codificados em faixas e padronizados')
+    df_scaled, legends_faixa, scaler_faixa = prepare_data(df)
+    print(df_scaled.info())
+    print('\n', df_scaled.head(20).to_string(), '\n')
+
+    print('\nVERIFICAÇÃO DO DATAFRAME APÓS PREPARAÇÃO: \n')
+    print('Dados sem codificação em faixas e padronizados')
+    df_cont, legends_cont, scaler_cont = prepare_data_2(df)
+    print(df_cont.info())
+    print('\n', df_cont.head(20).to_string(), '\n')
+
+    # =========================================================
+    # 2. VISUALIZAÇÃO
+    # =========================================================
+    plot_scatter_matrix(df_scaled, title="Scatter Matrix - Dados em faixas")
+    plot_scatter_matrix(df_cont, title="Scatter Matrix - Dados contínuos")
+
+    # =========================================================
+    # 3. ESCOLHER K
+    # =========================================================
+    """
+    Dados em faixas:
+    Mesmo com a função avançada, valor do k continua alto.
+    KMeans está fragmentando combinações parecidas e gerando clusters iguais.
+    Testar valores menores para o intervalo testado no range.
+    range(2, 10) gera 9 clusters e quatro são iguais.
+    range(2, 7) gera 5 clusters e dois são iguais.
+    
+    Dados contínuos:
+    range(2, 7) gera 6 clusters e dois são iguais.
+    Função avançada está mais rigorosa, range e valor maximo de k foram reduzidos.
+    O modelo com dados contínuos perfoma melhor, porém o numero de clusters continua alto.
+    range(2, 6) gera 5 clusters e dois são iguais.
+    range(2, 5) gera 4 clusters 
+    """
+    print("\n==== DADOS CODIFICADOS EM FAIXAS ====\n")
+    results = evaluate_kmeans_range(df_scaled.values, range(2, 5))
+    print("\nRESULTADO DOS MÉTODOS DE ESCOLHA DOS CLUSTERS COM DADOS CODIFICADOS EM FAIXAS\n")
+    print(results.sort_values("Silhouette", ascending=False))
+
+    plot_elbow_and_validation(
+        results,
+        title_elbow="Elbow - Dados em Faixas",
+        title_validation="Validação - Dados em Faixas"
+    )
+
+    # best_k = choose_best_k(results)
+    # print("\nMelhor K:", best_k)
+
+    best_k, ranked_results = choose_best_k_smart(
+        results,
+        max_reasonable_k=4
+    )
+
+    print("\nRANKING INTELIGENTE DE K\n")
+    print(
+        ranked_results[
+            [
+                "k",
+                "Silhouette",
+                "Calinski_Harabasz",
+                "Davies_Bouldin",
+                "simplicity_norm",
+                "smart_score",
+            ]
+        ].round(4).to_string(index=False)
+    )
+
+    print(f"\nK sugerido: {best_k}")
+
+    print("\n==== DADOS CONTÍNUOS ====\n")
+
+    results2 = evaluate_kmeans_range(df_cont.values, range(2, 5))
+    print("\nRESULTADO DOS MÉTODOS DE ESCOLHA DOS CLUSTERS COM DADOS CONTÍNUOS\n")
+    print(results2.sort_values("Silhouette", ascending=False))
+
+    plot_elbow_and_validation(
+        results2,
+        title_elbow="Elbow - Dados Contínuos",
+        title_validation="Validação - Dados Contínuos"
+    )
+
+    best_k2, ranked_results2 = choose_best_k_smart(
+        results2,
+        max_reasonable_k=4
+    )
+
+    print("\nRANKING INTELIGENTE DE K\n")
+    print(
+        ranked_results2[
+            [
+                "k",
+                "Silhouette",
+                "Calinski_Harabasz",
+                "Davies_Bouldin",
+                "simplicity_norm",
+                "smart_score",
+            ]
+        ].round(4).to_string(index=False)
+    )
+
+    print(f"\nK sugerido: {best_k2}")
+
+    # =========================================================
+    # 4. TREINAR KMEANS
+    # =========================================================
+    model = fit_kmeans(df_scaled.values, n_clusters=best_k)
+    model2 = fit_kmeans(df_cont.values, n_clusters=best_k2)
+
+    # =========================================================
+    # 5. ADICIONAR CLUSTERS
+    # =========================================================
+    df_clustered = add_cluster_labels(df_scaled, model.labels_)
+    df_clustered2 = add_cluster_labels(df_cont, model2.labels_)
+
+    # =========================================================
+    # 6. DECODIFICAR PARA INTERPRETAÇÃO
+    # =========================================================
+    df_decoded = decode_scaled_data(
+        df_scaled,
+        scaler_faixa,
+        legends_faixa
+    )
+
+    df_decoded["cluster"] = model.labels_
+
+    df_decoded2 = decode_scaled_data(
+        df_cont,
+        scaler_cont,
+        legends_cont
+    )
+
+    df_decoded2["cluster"] = model2.labels_
+
+    print("\n==== DADOS DECODIFICADOS ====\n")
+    print(df_decoded.head(20))
+
+    # =========================================================
+    # 7. CENTRÓIDES
+    # =========================================================
+    centroids = get_centroids_original_scale(
+        model,
+        scaler_faixa,
+        df_scaled.columns
+    )
+
+    print("\n==== CENTRÓIDES DADOS EM FAIXAS ====\n")
+    print(centroids)
+
+    centroids2 = get_centroids_original_scale(
+        model2,
+        scaler_cont,
+        df_cont.columns
+    )
+
+    print("\n==== CENTRÓIDES DADOS CONTÍNUOS ====\n")
+    print(centroids2)
+
+    # =========================================================
+    # 8. PERFIL DOS CLUSTERS
+    # =========================================================
+    print("\n==== PERFIL DOS CLUSTERS DADOS EM FAIXAS ====\n")
+    summarize_clusters(df_decoded)
+
+    print("\n==== PERFIL DOS CLUSTERS DADOS CONTÍNUOS ====\n")
+    df_original = pd.DataFrame(
+        scaler_cont.inverse_transform(df_cont),
+        columns=df_cont.columns
+    )
+    df_original["Gender_Male"] = df_original["Gender_Male"].round().astype(int)
+
+    summarize_clusters_advanced(df_original, model2.labels_)
+
+    plot_clusters_with_centroids(
+        df_clustered,
+        centroids,
+        x_col="Income",
+        y_col="Score",
+        cluster_col="cluster",
+        title="Clusters com Centróides dados em faixa (Income vs Score)"
+    )
+
+    # CONVERTER PARA ESCALA ORIGINAL
+    df_plot = pd.DataFrame(
+        scaler_cont.inverse_transform(df_cont),
+        columns=df_cont.columns
+    )
+
+    df_plot["cluster"] = model2.labels_
+
+    # CENTRÓIDES NA MESMA ESCALA
+    centroids_plot = pd.DataFrame(
+        scaler_cont.inverse_transform(model2.cluster_centers_),
+        columns=df_cont.columns
+    )
+
+    plot_clusters_with_centroids(
+        df_plot,
+        centroids_plot,
+        x_col="Income",
+        y_col="Score",
+        cluster_col="cluster",
+        title="Clusters (dados reais - Income vs Score)"
+    )
+
+    cluster_names = name_clusters(df_original, model2.labels_)
+
+    print("\n==== NOMES DOS CLUSTERS ====\n")
+    for k, v in cluster_names.items():
+        print(f"Cluster {k}: {v}")
+
+    plot_pca_clusters(df_cont, model2.labels_)
+
+
+if __name__ == "__main__":
+    main()

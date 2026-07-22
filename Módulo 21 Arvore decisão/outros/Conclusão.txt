@@ -1,0 +1,13 @@
+Neste projeto foi desenvolvido um modelo de Classificação Multiclasse de Credit Score utilizando Árvore de Decisão, com foco em avaliação de desempenho, interpretabilidade e boas práticas de modelagem. O projeto demonstra a aplicação prática de Árvores de Decisão, desde a separação das bases de treino/teste, a modelagem inicial utilizando o comando DecisionTreeClassifier da biblioteca scikit-learn, até a análise crítica dos resultados, alinhando desempenho preditivo e interpretabilidade.
+
+Inicialmente, foi treinado um modelo baseline, seguido por uma análise de importância das variáveis, que permitiu a construção de um modelo simplificado utilizando apenas as duas features mais relevantes, mantendo desempenho semelhante ao modelo completo. Em seguida, como proposta de melhoria, foi aplicado tuning de hiperparâmetros com validação cruzada estratificada, resultando em um modelo mais simples e estável, sem perda significativa de desempenho no conjunto de teste.
+
+Durante o desenvolvimento, foi identificado e corrigido um vazamento de informação (data leakage), garantindo que apenas variáveis independentes fossem utilizadas no processo de treinamento, o que reforça a confiabilidade dos resultados obtidos.
+
+O modelo baseline apresentou desempenho perfeito no conjunto de treino e excelente desempenho no conjunto de teste, com apenas um erro de classificação, indicando leve overfitting, comportamento esperado para árvores sem restrição de profundidade.
+No modelo com duas features (Renda/Propriedade de casa), o desempenho no teste foi equivalente ao modelo completo, com apenas um erro no treino. Esse resultado mostra que grande parte do poder preditivo do modelo está concentrada em poucas variáveis.
+No modelo com tuning, o treino teve desempenho ligeiramente inferior ao baseline (redução de overfitting) e no teste teve desempenho equivalente ao baseline.
+A matriz de confusão mostrou apenas um erro no conjunto de teste, um cliente com Credit Score Médio foi classificado como Baixo.
+Do ponto de vista de risco de crédito, esse tipo de erro é mais conservador, pois reduz a chance de concessão indevida de crédito, sendo geralmente preferível ao erro inverso.
+
+O modelo de classificação utilizando Decision Tree teve métricas melhores do que o modelo utilizando Naive-Bayes, porém uma diferença muito baixa. Ambos modelos tiveram erros, mas nenhum foi de predição de classificação do score mais alto em casos reais com score baixo. Desta forma, os modelos são seguros, pois os erros não aumentam a probabilidade de clientes inadimplentes.

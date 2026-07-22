@@ -1,0 +1,13 @@
+|--- RENDA <= 41250.00
+|   |--- class: 1
+|--- RENDA >  41250.00
+|   |--- PROPRIEDADE DE CASA_Controlado <= 0.50
+|   |   |--- RENDA <= 80000.00
+|   |   |   |--- class: 2
+|   |   |--- RENDA >  80000.00
+|   |   |   |--- class: 0
+|   |--- PROPRIEDADE DE CASA_Controlado >  0.50
+|   |   |--- IDADE_MEDIA <= 29.50
+|   |   |   |--- class: 2
+|   |   |--- IDADE_MEDIA >  29.50
+|   |   |   |--- class: 0

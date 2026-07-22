@@ -1,0 +1,373 @@
+﻿id_client,state_name,first_name,gender,job_title,category,category_norm,price,card_type
+1,TX,Domingo,male,Structural Analysis Engineer,Outdoors,OUTDOORS,16.97,mastercard
+2,MI,Russell,male,Speech Pathologist,Grocery,GROCERY,143.39,mastercard
+3,AL,Kimble,male,Account Coordinator,Music,MUSIC,37.64,mastercard
+4,IL,Barnabas,male,General Manager,Jewelry,JEWELRY,8.51,mastercard
+5,MN,Tanney,female,VP Marketing,Grocery,GROCERY,28.42,mastercard
+5,MN,Tanney,female,VP Marketing,Outdoors,OUTDOORS,61.95,mastercard
+6,VA,Launce,male,Automation Specialist I,Outdoors,OUTDOORS,15.96,mastercard
+7,CO,Adham,male,Project Manager,Beauty,BEAUTY,149.02,mastercard
+8,TX,Dante,male,Geological Engineer,Games,GAMES,97.38,mastercard
+9,PA,Hi,female,Senior Cost Accountant,Outdoors,OUTDOORS,139.96,mastercard
+10,CA,Carmine,female,Statistician II,Shoes,SHOES,55.45,mastercard
+11,NC,Waring,female,Software Consultant,Jewelry,JEWELRY,96.16,mastercard
+12,CA,Cori,female,Senior Sales Associate,Computers,COMPUTERS,104.93,mastercard
+13,TX,Rodge,genderfluid,Health Coach III,Baby,BABY,92.52,mastercard
+14,TX,Nikolos,male,Geologist III,Grocery,GROCERY,108.42,mastercard
+15,DC,Guy,female,Senior Cost Accountant,Shoes,SHOES,144.17,mastercard
+16,TX,Anton,male,Media Manager II,Computers,COMPUTERS,5.45,mastercard
+17,VA,Willem,female,Media Manager II,Industrial,INDUSTRIAL,27.87,mastercard
+17,VA,Willem,female,Media Manager II,Sports,SPORTS,5.12,mastercard
+18,OH,Timothy,female,Marketing Manager,Automotive,AUTOMOTIVE,116.19,mastercard
+18,OH,Timothy,female,Marketing Manager,Games,GAMES,29.3,mastercard
+19,MD,Sheridan,male,Assistant Manager,Computers,COMPUTERS,3.72,mastercard
+19,MD,Sheridan,male,Assistant Manager,Toys,TOYS,9.34,mastercard
+20,LA,Kalil,genderfluid,Senior Editor,Kids,KIDS,36.02,mastercard
+20,LA,Kalil,genderfluid,Senior Editor,Music,MUSIC,94.53,mastercard
+21,LA,Augusto,female,Research Nurse,Computers,COMPUTERS,16.72,mastercard
+21,LA,Augusto,female,Research Nurse,Outdoors,OUTDOORS,31.34,mastercard
+22,LA,Duffie,female,Information Systems Manager,Home,HOME,72.98,mastercard
+22,LA,Duffie,female,Information Systems Manager,Tools,TOOLS,32.56,mastercard
+23,FL,Clyde,female,Dental Hygienist,Beauty,BEAUTY,6.84,mastercard
+23,FL,Clyde,female,Dental Hygienist,Sports,SPORTS,72.91,mastercard
+24,GA,Harcourt,female,Web Designer III,Beauty,BEAUTY,76.3,mastercard
+24,GA,Harcourt,female,Web Designer III,Grocery,GROCERY,10.44,mastercard
+25,LA,Elwyn,male,Senior Developer,Clothing,CLOTHING,85.65,mastercard
+25,LA,Elwyn,male,Senior Developer,Music,MUSIC,97.94,mastercard
+26,LA,Desmund,female,Senior Sales Associate,Industrial,INDUSTRIAL,133.3,mastercard
+26,LA,Desmund,female,Senior Sales Associate,Music,MUSIC,77.58,mastercard
+27,TX,Emelen,male,Project Manager,Baby,BABY,69.98,mastercard
+27,TX,Emelen,male,Project Manager,Baby,BABY,129.78,mastercard
+28,MI,Mattheus,female,Pharmacist,Electronics,ELECTRONICS,64.54,mastercard
+28,MI,Mattheus,female,Pharmacist,Jewelry,JEWELRY,48.58,mastercard
+29,MI,Jonas,male,Cost Accountant,Home,HOME,142.53,mastercard
+29,MI,Jonas,male,Cost Accountant,Tools,TOOLS,108.82,mastercard
+30,OH,Moishe,female,Human Resources Assistant III,Health,HEALTH,51.88,mastercard
+30,OH,Moishe,female,Human Resources Assistant III,Industrial,INDUSTRIAL,99.03,mastercard
+31,NE,Reinwald,male,Sales Representative,Toys,TOYS,68.69,mastercard
+31,NE,Reinwald,male,Sales Representative,Toys,TOYS,87.62,mastercard
+32,CA,Tobin,male,Food Chemist,Home,HOME,141.11,mastercard
+32,CA,Tobin,male,Food Chemist,Kids,KIDS,68.66,mastercard
+33,FL,Bo,male,VP Product Management,Books,BOOKS,68.77,mastercard
+33,FL,Bo,male,VP Product Management,Industrial,INDUSTRIAL,80.97,mastercard
+34,WA,Sherm,male,Senior Financial Analyst,Home,HOME,15.12,mastercard
+34,WA,Sherm,male,Senior Financial Analyst,Industrial,INDUSTRIAL,24.8,mastercard
+35,VA,Mile,male,Occupational Therapist,Movies,MOVIES,67.89,mastercard
+35,VA,Mile,male,Occupational Therapist,Movies,MOVIES,96.45,mastercard
+36,TX,Turner,male,Automation Specialist IV,Health,HEALTH,123.38,mastercard
+36,TX,Turner,male,Automation Specialist IV,Industrial,INDUSTRIAL,55.46,mastercard
+37,ND,Cornie,genderqueer,Editor,Electronics,ELECTRONICS,72.93,mastercard
+37,ND,Cornie,genderqueer,Editor,Home,HOME,36.27,mastercard
+37,ND,Cornie,genderqueer,Editor,Home,HOME,58.77,mastercard
+38,PA,Rab,male,Assistant Manager,Clothing,CLOTHING,83.07,mastercard
+38,PA,Rab,male,Assistant Manager,Clothing,CLOTHING,117.56,mastercard
+38,PA,Rab,male,Assistant Manager,Jewelry,JEWELRY,121.89,mastercard
+39,MA,Codie,female,Financial Analyst,Baby,BABY,64.3,mastercard
+39,MA,Codie,female,Financial Analyst,Clothing,CLOTHING,134.15,mastercard
+39,MA,Codie,female,Financial Analyst,Home,HOME,112.25,mastercard
+40,OR,Scott,female,Civil Engineer,Jewelry,JEWELRY,53.63,mastercard
+40,OR,Scott,female,Civil Engineer,Outdoors,OUTDOORS,9.48,mastercard
+40,OR,Scott,female,Civil Engineer,Sports,SPORTS,139.0,mastercard
+41,MS,Hilary,male,Design Engineer,Beauty,BEAUTY,85.16,mastercard
+41,MS,Hilary,male,Design Engineer,Books,BOOKS,82.78,mastercard
+42,CA,Keir,female,Senior Editor,Automotive,AUTOMOTIVE,84.32,mastercard
+42,CA,Keir,female,Senior Editor,Movies,MOVIES,132.11,mastercard
+43,TX,Raffarty,male,General Manager,Computers,COMPUTERS,59.74,mastercard
+43,TX,Raffarty,male,General Manager,Shoes,SHOES,35.57,mastercard
+44,CA,Federico,non-binary,Nurse Practicioner,Automotive,AUTOMOTIVE,105.26,mastercard
+44,CA,Federico,non-binary,Nurse Practicioner,Home,HOME,29.0,mastercard
+45,FL,Karlan,female,Financial Advisor,Automotive,AUTOMOTIVE,4.34,mastercard
+45,FL,Karlan,female,Financial Advisor,Shoes,SHOES,53.56,mastercard
+46,PA,Demetris,female,Programmer Analyst IV,Garden,GARDEN,132.73,mastercard
+46,PA,Demetris,female,Programmer Analyst IV,Tools,TOOLS,136.53,mastercard
+47,AZ,Lisle,female,Web Designer I,Home,HOME,78.99,mastercard
+47,AZ,Lisle,female,Web Designer I,Industrial,INDUSTRIAL,106.66,mastercard
+48,MS,Rabi,genderfluid,Director of Sales,Grocery,GROCERY,51.27,mastercard
+48,MS,Rabi,genderfluid,Director of Sales,Health,HEALTH,93.46,mastercard
+49,NY,Jareb,male,Sales Associate,Books,BOOKS,147.63,mastercard
+49,NY,Jareb,male,Sales Associate,Sports,SPORTS,18.23,mastercard
+50,NV,Sergent,male,Geologist II,Jewelry,JEWELRY,128.95,mastercard
+50,NV,Sergent,male,Geologist II,Kids,KIDS,145.58,mastercard
+51,NY,Reinaldo,female,Editor,Garden,GARDEN,53.74,mastercard
+51,NY,Reinaldo,female,Editor,Shoes,SHOES,81.44,mastercard
+52,OR,Zebadiah,female,Desktop Support Technician,Computers,COMPUTERS,66.4,mastercard
+52,OR,Zebadiah,female,Desktop Support Technician,Health,HEALTH,64.7,mastercard
+53,DC,Shurlock,polygender,Junior Executive,Beauty,BEAUTY,60.66,mastercard
+53,DC,Shurlock,polygender,Junior Executive,Games,GAMES,17.67,mastercard
+54,WV,Chip,agender,Recruiting Manager,Industrial,INDUSTRIAL,9.11,mastercard
+54,WV,Chip,agender,Recruiting Manager,Industrial,INDUSTRIAL,13.38,mastercard
+55,TX,Alford,female,Human Resources Assistant I,Baby,BABY,41.92,mastercard
+55,TX,Alford,female,Human Resources Assistant I,Industrial,INDUSTRIAL,100.62,mastercard
+56,MO,Marius,male,Senior Cost Accountant,Books,BOOKS,132.4,mastercard
+56,MO,Marius,male,Senior Cost Accountant,Home,HOME,40.89,mastercard
+57,MA,Marmaduke,non-binary,Sales Associate,Computers,COMPUTERS,113.68,mastercard
+57,MA,Marmaduke,non-binary,Sales Associate,Kids,KIDS,60.75,mastercard
+58,NV,Emlyn,female,Business Systems Development Analyst,Music,MUSIC,57.67,mastercard
+58,NV,Emlyn,female,Business Systems Development Analyst,Toys,TOYS,10.73,mastercard
+59,NY,Frederich,female,Health Coach II,Music,MUSIC,90.98,mastercard
+59,NY,Frederich,female,Health Coach II,Tools,TOOLS,114.58,mastercard
+60,CA,Davidde,male,VP Marketing,Garden,GARDEN,41.34,mastercard
+60,CA,Davidde,male,VP Marketing,Movies,MOVIES,95.97,mastercard
+61,CA,Angus,female,Senior Sales Associate,Games,GAMES,7.24,mastercard
+61,CA,Angus,female,Senior Sales Associate,Kids,KIDS,54.04,mastercard
+62,CA,Cchaddie,male,Business Systems Development Analyst,Grocery,GROCERY,97.0,mastercard
+62,CA,Cchaddie,male,Business Systems Development Analyst,Grocery,GROCERY,119.74,mastercard
+63,AR,Fons,female,Senior Developer,Beauty,BEAUTY,45.49,mastercard
+63,AR,Fons,female,Senior Developer,Garden,GARDEN,9.11,mastercard
+64,SD,Lucio,female,Web Developer IV,Health,HEALTH,99.37,mastercard
+64,SD,Lucio,female,Web Developer IV,Jewelry,JEWELRY,142.25,mastercard
+65,CA,Wolf,male,Recruiting Manager,Games,GAMES,26.75,mastercard
+65,CA,Wolf,male,Recruiting Manager,Grocery,GROCERY,78.53,mastercard
+66,LA,Lazare,male,Associate Professor,Music,MUSIC,63.78,mastercard
+66,LA,Lazare,male,Associate Professor,Shoes,SHOES,85.94,mastercard
+67,KY,Cornelius,male,Recruiting Manager,Grocery,GROCERY,108.03,mastercard
+67,KY,Cornelius,male,Recruiting Manager,Jewelry,JEWELRY,17.25,mastercard
+68,OR,Matteo,bigender,Social Worker,Beauty,BEAUTY,69.2,mastercard
+68,OR,Matteo,bigender,Social Worker,Games,GAMES,49.82,mastercard
+69,CA,Domingo,female,Recruiter,Outdoors,OUTDOORS,115.34,mastercard
+69,CA,Domingo,female,Recruiter,Toys,TOYS,88.43,mastercard
+70,PA,Bordie,male,Sales Associate,Baby,BABY,22.68,mastercard
+70,PA,Bordie,male,Sales Associate,Tools,TOOLS,23.53,mastercard
+71,CA,Neil,female,Geologist IV,Kids,KIDS,55.81,mastercard
+71,CA,Neil,female,Geologist IV,Music,MUSIC,125.82,mastercard
+72,TX,Allistir,female,Chief Design Engineer,Computers,COMPUTERS,96.65,mastercard
+72,TX,Allistir,female,Chief Design Engineer,Jewelry,JEWELRY,41.3,mastercard
+73,DC,Rafe,genderfluid,Senior Editor,Health,HEALTH,34.88,mastercard
+73,DC,Rafe,genderfluid,Senior Editor,Outdoors,OUTDOORS,64.76,mastercard
+74,NE,Galvan,male,Teacher,Jewelry,JEWELRY,11.45,mastercard
+74,NE,Galvan,male,Teacher,Shoes,SHOES,61.25,mastercard
+75,LA,Dionysus,female,Legal Assistant,Beauty,BEAUTY,91.49,mastercard
+75,LA,Dionysus,female,Legal Assistant,Movies,MOVIES,141.32,mastercard
+76,TX,Raul,male,Speech Pathologist,Health,HEALTH,19.59,mastercard
+76,TX,Raul,male,Speech Pathologist,Shoes,SHOES,98.09,mastercard
+77,CT,Codie,female,Media Manager I,Garden,GARDEN,94.58,mastercard
+77,CT,Codie,female,Media Manager I,Home,HOME,95.54,mastercard
+78,DC,Zeke,female,Research Associate,Computers,COMPUTERS,140.9,mastercard
+78,DC,Zeke,female,Research Associate,Health,HEALTH,53.12,mastercard
+79,FL,Siegfried,female,VP Product Management,Clothing,CLOTHING,32.87,mastercard
+79,FL,Siegfried,female,VP Product Management,Computers,COMPUTERS,64.61,mastercard
+80,CT,Les,female,Junior Executive,,,,
+81,IL,Kilian,male,Design Engineer,,,,
+82,NC,Donall,male,Web Developer III,,,,
+83,CA,Hershel,male,Nurse,,,,
+84,IL,Demetris,male,Social Worker,,,,
+85,DC,Kennan,female,Project Manager,Kids,KIDS,139.38,mastercard
+86,FL,Gilburt,female,Community Outreach Specialist,Shoes,SHOES,123.66,mastercard
+87,ID,Ruttger,male,Chief Design Engineer,Books,BOOKS,66.68,mastercard
+88,CA,Fransisco,female,Design Engineer,Tools,TOOLS,23.51,mastercard
+89,TX,Reade,female,General Manager,Baby,BABY,81.13,mastercard
+90,FL,Weylin,male,Engineer I,Clothing,CLOTHING,66.53,mastercard
+91,FL,Riobard,male,Technical Writer,Music,MUSIC,86.24,mastercard
+92,IN,Ambrosi,male,Analyst Programmer,Industrial,INDUSTRIAL,45.48,mastercard
+93,VA,Norris,genderqueer,Business Systems Development Analyst,Outdoors,OUTDOORS,79.53,mastercard
+94,CA,Lorens,female,Staff Accountant IV,Health,HEALTH,92.86,mastercard
+95,IL,Denis,female,VP Product Management,Electronics,ELECTRONICS,125.29,mastercard
+96,OH,Rhett,female,Biostatistician IV,Baby,BABY,18.69,mastercard
+97,AL,Hamlin,male,Media Manager I,Movies,MOVIES,136.95,mastercard
+98,PA,Sebastien,male,Media Manager III,Games,GAMES,114.69,mastercard
+99,CA,Dewey,female,Executive Secretary,Clothing,CLOTHING,104.06,mastercard
+100,AL,Renault,agender,Biostatistician IV,Games,GAMES,146.54,mastercard
+100,AL,Renault,agender,Biostatistician IV,Kids,KIDS,54.37,mastercard
+101,CA,Blayne,female,Software Engineer IV,Computers,COMPUTERS,101.07,mastercard
+101,CA,Blayne,female,Software Engineer IV,Sports,SPORTS,148.59,mastercard
+102,NY,Mendy,male,Web Designer III,Games,GAMES,25.12,mastercard
+102,NY,Mendy,male,Web Designer III,Kids,KIDS,101.98,mastercard
+103,NY,Finley,male,Associate Professor,Electronics,ELECTRONICS,92.96,mastercard
+103,NY,Finley,male,Associate Professor,Kids,KIDS,33.69,mastercard
+104,MN,Tynan,male,VP Sales,Electronics,ELECTRONICS,25.48,mastercard
+104,MN,Tynan,male,VP Sales,Grocery,GROCERY,87.1,mastercard
+105,TX,Christoph,female,Quality Control Specialist,Movies,MOVIES,102.59,mastercard
+105,TX,Christoph,female,Quality Control Specialist,Outdoors,OUTDOORS,45.72,mastercard
+106,IN,Vassili,male,Chemical Engineer,Health,HEALTH,77.19,mastercard
+106,IN,Vassili,male,Chemical Engineer,Outdoors,OUTDOORS,97.85,mastercard
+107,WA,Titos,male,Nuclear Power Engineer,Tools,TOOLS,11.64,mastercard
+107,WA,Titos,male,Nuclear Power Engineer,Tools,TOOLS,16.65,mastercard
+108,NC,Turner,female,Developer IV,Kids,KIDS,56.68,mastercard
+108,NC,Turner,female,Developer IV,Music,MUSIC,39.52,mastercard
+109,OH,Kyle,male,Actuary,Electronics,ELECTRONICS,57.1,mastercard
+109,OH,Kyle,male,Actuary,Garden,GARDEN,128.48,mastercard
+110,TX,Yehudi,genderfluid,Project Manager,Computers,COMPUTERS,54.2,mastercard
+110,TX,Yehudi,genderfluid,Project Manager,Tools,TOOLS,77.33,mastercard
+111,VA,Adams,female,Clinical Specialist,Beauty,BEAUTY,3.45,mastercard
+111,VA,Adams,female,Clinical Specialist,Clothing,CLOTHING,136.63,mastercard
+112,TX,Ingemar,genderqueer,Account Coordinator,Games,GAMES,28.0,mastercard
+112,TX,Ingemar,genderqueer,Account Coordinator,Jewelry,JEWELRY,99.85,mastercard
+112,TX,Ingemar,genderqueer,Account Coordinator,Kids,KIDS,9.12,mastercard
+113,DC,Bartolomeo,male,Executive Secretary,Electronics,ELECTRONICS,8.23,mastercard
+113,DC,Bartolomeo,male,Executive Secretary,Music,MUSIC,65.25,mastercard
+113,DC,Bartolomeo,male,Executive Secretary,Toys,TOYS,115.39,mastercard
+114,IN,Lennard,female,Administrative Assistant II,Home,HOME,19.31,mastercard
+114,IN,Lennard,female,Administrative Assistant II,Jewelry,JEWELRY,45.94,mastercard
+114,IN,Lennard,female,Administrative Assistant II,Movies,MOVIES,12.17,mastercard
+115,AZ,Ralf,female,Senior Quality Engineer,Automotive,AUTOMOTIVE,130.2,mastercard
+115,AZ,Ralf,female,Senior Quality Engineer,Beauty,BEAUTY,73.73,mastercard
+115,AZ,Ralf,female,Senior Quality Engineer,Tools,TOOLS,32.57,mastercard
+116,CA,Marten,non-binary,Web Developer IV,Baby,BABY,114.29,mastercard
+116,CA,Marten,non-binary,Web Developer IV,Industrial,INDUSTRIAL,42.22,mastercard
+116,CA,Marten,non-binary,Web Developer IV,Music,MUSIC,31.92,mastercard
+117,GA,Portie,female,Teacher,Baby,BABY,69.25,mastercard
+117,GA,Portie,female,Teacher,Beauty,BEAUTY,118.85,mastercard
+117,GA,Portie,female,Teacher,Beauty,BEAUTY,125.24,mastercard
+118,IL,Jacob,male,Teacher,Beauty,BEAUTY,70.14,mastercard
+118,IL,Jacob,male,Teacher,Kids,KIDS,50.04,mastercard
+118,IL,Jacob,male,Teacher,Shoes,SHOES,91.23,mastercard
+119,NC,Joaquin,male,Product Engineer,Baby,BABY,134.09,mastercard
+119,NC,Joaquin,male,Product Engineer,Jewelry,JEWELRY,129.51,mastercard
+120,NY,Dougy,male,Computer Systems Analyst IV,Baby,BABY,24.97,mastercard
+120,NY,Dougy,male,Computer Systems Analyst IV,Health,HEALTH,67.75,mastercard
+121,OH,Bartel,female,Actuary,Clothing,CLOTHING,145.64,mastercard
+121,OH,Bartel,female,Actuary,Industrial,INDUSTRIAL,105.17,mastercard
+122,KS,Inigo,female,Programmer Analyst II,Clothing,CLOTHING,46.16,mastercard
+122,KS,Inigo,female,Programmer Analyst II,Home,HOME,99.16,mastercard
+123,VA,Ross,male,Analog Circuit Design manager,Beauty,BEAUTY,96.87,mastercard
+123,VA,Ross,male,Analog Circuit Design manager,Books,BOOKS,39.03,mastercard
+124,DC,Saul,female,VP Marketing,Health,HEALTH,142.63,mastercard
+124,DC,Saul,female,VP Marketing,Toys,TOYS,29.08,mastercard
+125,CA,Bary,female,Technical Writer,Movies,MOVIES,148.07,mastercard
+126,NJ,Anatol,male,Sales Representative,Kids,KIDS,0.51,mastercard
+127,MI,Gaspard,male,Automation Specialist I,Industrial,INDUSTRIAL,63.15,mastercard
+128,NY,Kirk,male,Nuclear Power Engineer,Music,MUSIC,137.43,mastercard
+129,LA,Jamill,female,Cost Accountant,Electronics,ELECTRONICS,100.18,mastercard
+130,FL,Angel,female,Quality Engineer,Kids,KIDS,128.6,mastercard
+131,AR,Harley,female,Associate Professor,Shoes,SHOES,111.91,mastercard
+132,CT,Alex,male,VP Product Management,Industrial,INDUSTRIAL,119.73,mastercard
+133,DC,Averill,female,Assistant Professor,Clothing,CLOTHING,113.71,mastercard
+134,VA,Christy,female,Research Associate,Outdoors,OUTDOORS,101.06,mastercard
+135,VA,Chrisse,male,Technical Writer,Shoes,SHOES,42.24,mastercard
+136,FL,Edgar,polygender,Biostatistician IV,Jewelry,JEWELRY,93.71,mastercard
+137,IN,Swen,agender,Pharmacist,Baby,BABY,15.52,mastercard
+137,IN,Swen,agender,Pharmacist,Sports,SPORTS,66.49,mastercard
+138,OR,Obadiah,male,Office Assistant II,Industrial,INDUSTRIAL,29.28,mastercard
+138,OR,Obadiah,male,Office Assistant II,Kids,KIDS,34.86,mastercard
+139,MA,Reilly,female,Nurse,Sports,SPORTS,138.76,mastercard
+139,MA,Reilly,female,Nurse,Tools,TOOLS,31.04,mastercard
+140,PA,Baron,female,Safety Technician III,Baby,BABY,2.58,mastercard
+140,PA,Baron,female,Safety Technician III,Sports,SPORTS,4.31,mastercard
+141,OH,Britt,male,Accounting Assistant III,Beauty,BEAUTY,119.12,mastercard
+141,OH,Britt,male,Accounting Assistant III,Industrial,INDUSTRIAL,143.93,mastercard
+142,TX,Raimondo,male,Administrative Assistant IV,Health,HEALTH,138.62,mastercard
+142,TX,Raimondo,male,Administrative Assistant IV,Sports,SPORTS,44.99,mastercard
+143,CA,Trip,female,Data Coordinator,Games,GAMES,101.05,mastercard
+143,CA,Trip,female,Data Coordinator,Shoes,SHOES,27.43,mastercard
+144,UT,Teddy,male,Payment Adjustment Coordinator,Grocery,GROCERY,9.42,mastercard
+144,UT,Teddy,male,Payment Adjustment Coordinator,Industrial,INDUSTRIAL,78.48,mastercard
+145,NJ,Justino,female,Teacher,Electronics,ELECTRONICS,43.57,mastercard
+145,NJ,Justino,female,Teacher,Grocery,GROCERY,64.39,mastercard
+146,FL,Con,male,Operator,Automotive,AUTOMOTIVE,66.52,mastercard
+146,FL,Con,male,Operator,Toys,TOYS,85.19,mastercard
+147,MA,Claiborne,female,Dental Hygienist,Movies,MOVIES,23.51,mastercard
+147,MA,Claiborne,female,Dental Hygienist,Shoes,SHOES,38.07,mastercard
+148,ID,Harold,female,Sales Associate,Books,BOOKS,116.73,mastercard
+148,ID,Harold,female,Sales Associate,Jewelry,JEWELRY,5.12,mastercard
+149,TX,Raynard,female,Environmental Specialist,Movies,MOVIES,4.9,mastercard
+149,TX,Raynard,female,Environmental Specialist,Tools,TOOLS,63.01,mastercard
+150,DC,Boothe,male,Marketing Manager,Electronics,ELECTRONICS,12.15,mastercard
+150,DC,Boothe,male,Marketing Manager,Games,GAMES,102.57,mastercard
+151,KS,Cornie,male,Engineer II,Garden,GARDEN,101.21,mastercard
+151,KS,Cornie,male,Engineer II,Shoes,SHOES,112.89,mastercard
+152,HI,Teador,female,Assistant Media Planner,Home,HOME,91.84,mastercard
+152,HI,Teador,female,Assistant Media Planner,Movies,MOVIES,141.55,mastercard
+153,TN,Nial,male,Help Desk Technician,Beauty,BEAUTY,88.43,mastercard
+153,TN,Nial,male,Help Desk Technician,Jewelry,JEWELRY,138.11,mastercard
+154,NJ,Talbot,male,VP Marketing,Beauty,BEAUTY,47.89,mastercard
+154,NJ,Talbot,male,VP Marketing,Electronics,ELECTRONICS,107.81,mastercard
+155,DC,Karlens,male,Desktop Support Technician,Beauty,BEAUTY,133.1,mastercard
+155,DC,Karlens,male,Desktop Support Technician,Tools,TOOLS,60.42,mastercard
+156,FL,Ross,male,Senior Financial Analyst,Beauty,BEAUTY,134.75,mastercard
+156,FL,Ross,male,Senior Financial Analyst,Computers,COMPUTERS,93.13,mastercard
+157,TX,Dale,female,Senior Cost Accountant,Beauty,BEAUTY,59.81,mastercard
+157,TX,Dale,female,Senior Cost Accountant,Outdoors,OUTDOORS,117.02,mastercard
+158,IL,Jarib,genderfluid,Food Chemist,Automotive,AUTOMOTIVE,136.0,mastercard
+158,IL,Jarib,genderfluid,Food Chemist,Clothing,CLOTHING,144.9,mastercard
+159,PA,Adolphe,female,Database Administrator II,Electronics,ELECTRONICS,83.75,mastercard
+159,PA,Adolphe,female,Database Administrator II,Grocery,GROCERY,115.03,mastercard
+160,IL,Godard,female,Senior Editor,Computers,COMPUTERS,64.25,mastercard
+160,IL,Godard,female,Senior Editor,Toys,TOYS,62.04,mastercard
+161,NC,Dietrich,male,Paralegal,Industrial,INDUSTRIAL,1.86,mastercard
+161,NC,Dietrich,male,Paralegal,Music,MUSIC,104.63,mastercard
+162,DC,Reuven,female,Media Manager IV,Books,BOOKS,93.91,mastercard
+162,DC,Reuven,female,Media Manager IV,Kids,KIDS,24.71,mastercard
+163,MD,Tadd,female,Electrical Engineer,Beauty,BEAUTY,118.07,mastercard
+164,VA,Marius,female,Safety Technician III,Tools,TOOLS,62.7,mastercard
+165,AL,Ricoriki,male,Sales Representative,Outdoors,OUTDOORS,1.72,mastercard
+166,IN,Courtnay,male,Quality Engineer,Electronics,ELECTRONICS,114.02,mastercard
+167,KS,Melvin,male,Senior Quality Engineer,Electronics,ELECTRONICS,135.37,mastercard
+168,TX,Nicol,male,Director of Sales,Industrial,INDUSTRIAL,17.52,mastercard
+169,AL,Seward,female,Editor,Sports,SPORTS,5.84,mastercard
+170,NY,Tremain,female,Executive Secretary,Music,MUSIC,138.49,mastercard
+171,UT,Fairleigh,male,Desktop Support Technician,Books,BOOKS,35.85,mastercard
+172,DC,Lambert,agender,Chemical Engineer,Automotive,AUTOMOTIVE,130.08,mastercard
+173,NY,Jacob,male,Senior Financial Analyst,Kids,KIDS,28.38,mastercard
+174,OK,Pip,male,Chief Design Engineer,Sports,SPORTS,36.35,mastercard
+175,OR,Murvyn,female,Safety Technician IV,Kids,KIDS,141.71,mastercard
+176,,,,,Home,HOME,15.42,mastercard
+177,,,,,Beauty,BEAUTY,48.98,mastercard
+178,,,,,Baby,BABY,143.16,mastercard
+179,,,,,Games,GAMES,63.4,mastercard
+180,,,,,Music,MUSIC,40.5,mastercard
+181,,,,,Sports,SPORTS,22.1,mastercard
+182,,,,,Tools,TOOLS,139.85,mastercard
+183,,,,,Movies,MOVIES,56.22,mastercard
+184,,,,,Beauty,BEAUTY,3.01,mastercard
+185,,,,,Music,MUSIC,32.31,mastercard
+186,,,,,Jewelry,JEWELRY,143.78,mastercard
+187,,,,,Baby,BABY,14.0,mastercard
+188,,,,,Shoes,SHOES,37.69,mastercard
+189,,,,,Sports,SPORTS,126.99,mastercard
+190,,,,,Outdoors,OUTDOORS,90.35,mastercard
+191,,,,,Outdoors,OUTDOORS,145.23,mastercard
+192,,,,,Industrial,INDUSTRIAL,76.81,mastercard
+193,,,,,Garden,GARDEN,139.49,mastercard
+194,,,,,Music,MUSIC,62.52,mastercard
+195,,,,,Tools,TOOLS,88.32,mastercard
+196,,,,,Grocery,GROCERY,0.05,mastercard
+197,,,,,Music,MUSIC,7.86,mastercard
+198,,,,,Computers,COMPUTERS,47.01,mastercard
+199,,,,,Health,HEALTH,78.65,mastercard
+200,,,,,Shoes,SHOES,131.44,mastercard
+201,,,,,Kids,KIDS,147.38,mastercard
+202,,,,,Industrial,INDUSTRIAL,145.48,mastercard
+203,,,,,Jewelry,JEWELRY,14.46,mastercard
+204,,,,,Grocery,GROCERY,129.2,mastercard
+205,,,,,Movies,MOVIES,140.56,mastercard
+206,,,,,Automotive,AUTOMOTIVE,103.79,mastercard
+207,,,,,Baby,BABY,22.7,mastercard
+208,,,,,Shoes,SHOES,33.57,mastercard
+209,,,,,Toys,TOYS,103.24,mastercard
+210,,,,,Jewelry,JEWELRY,105.43,mastercard
+211,,,,,Sports,SPORTS,3.04,mastercard
+212,,,,,Games,GAMES,118.25,mastercard
+213,,,,,Automotive,AUTOMOTIVE,17.47,mastercard
+214,,,,,Electronics,ELECTRONICS,50.17,mastercard
+215,,,,,Jewelry,JEWELRY,145.37,mastercard
+216,,,,,Movies,MOVIES,130.62,mastercard
+217,,,,,Jewelry,JEWELRY,41.55,mastercard
+218,,,,,Grocery,GROCERY,10.59,mastercard
+219,,,,,Sports,SPORTS,143.34,mastercard
+220,,,,,Computers,COMPUTERS,109.29,mastercard
+221,,,,,Garden,GARDEN,118.94,mastercard
+222,,,,,Kids,KIDS,51.39,mastercard
+223,,,,,Kids,KIDS,99.74,mastercard
+224,,,,,Clothing,CLOTHING,121.61,mastercard
+225,,,,,Games,GAMES,39.03,mastercard
+226,,,,,Kids,KIDS,42.28,mastercard
+227,,,,,Computers,COMPUTERS,56.59,mastercard
+228,,,,,Kids,KIDS,21.39,mastercard
+229,,,,,Tools,TOOLS,12.09,mastercard
+230,,,,,Automotive,AUTOMOTIVE,22.49,mastercard
+231,,,,,Tools,TOOLS,65.05,mastercard
+232,,,,,Kids,KIDS,88.78,mastercard
+233,,,,,Automotive,AUTOMOTIVE,85.21,mastercard
+234,,,,,Books,BOOKS,42.98,mastercard
+235,,,,,Kids,KIDS,44.04,mastercard
+236,,,,,Tools,TOOLS,28.33,mastercard
+237,,,,,Electronics,ELECTRONICS,68.68,mastercard
+238,,,,,Shoes,SHOES,35.83,mastercard
+360,,,,,Games,GAMES,21.32,mastercard
+361,,,,,Grocery,GROCERY,87.23,mastercard
+362,,,,,Clothing,CLOTHING,40.75,mastercard
+363,,,,,Jewelry,JEWELRY,44.32,mastercard
+364,,,,,Kids,KIDS,120.42,mastercard
+365,,,,,Grocery,GROCERY,24.31,mastercard
+366,,,,,Tools,TOOLS,111.53,mastercard
+367,,,,,Computers,COMPUTERS,84.57,mastercard

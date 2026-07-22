@@ -1,0 +1,18 @@
+Foi utilizado o RMSE, raiz do erro quadrático médio, para avaliar os modelos de regressão.
+Todos os modelos de regressão linear utilizaram todas as variáveis.
+No grau 1 não houveram benefícios com a regularização e a multicolinearidade era alta em número de suítes e banheiros.
+Após  a transformação das variáveis para a utilização dos polinômios percebe-se que não houveram mudanças significativas no RMSE 
+utilizando o grau dois, nem mesmo com as regularizações, porém a multicolinearidade aumentou muito.
+O modelo de grau quatro é interessante para analisar. O VIF desse modelo é altíssimo e a distância dos resíduos e a linha de regressão
+tem uma dispersão muito elevada, o que fica evidenciado pelo valor do RMSE. Ridge e Lasso não conseguiram regularizar o modelo, porém 
+utilizando elasticNet o modelo volta a ter valores do erro quadrático médio semelhantes aos modelos anteriores, demonstrando que a 
+combinação de L1 com L2 é mais eficaz no controle da multicolinearidade.
+
+A regularização Lasso promove uma redução dos coeficientes, forçando alguns a zero. Desta forma acaba simplificando o modelo por reduzir o número de variáveis. A equação da reta tem menos variáveis independentes por causa dos coeficientes zerados.
+A Ridge também promove a redução dos coeficientes, porém não força os valores a zero. A simplificação acontece ao se reduzir os valores
+dos coeficientes. Desta forma a equação da reta mantém as variáveis independentes com coeficientes mais próximos.
+Por último, a regularização elasticNet utiliza os dois métodos de redução vistos acima. Coeficientes são zerados e também são reduzidos.
+Essa combinação lida melhor quando há muitas variáveis com correlação forte. Primeiro utiliza a penalização de Lasso (L1) para manter
+somente as variáveis relevantes e depois utiliza a penalização de Ridge (L2) para reduzir os coeficientes altos. Desta forma o modelo
+mantém a simplicidade do Lasso e a estabilidade do Ridge. 
+

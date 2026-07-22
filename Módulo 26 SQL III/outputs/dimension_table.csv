@@ -1,0 +1,176 @@
+﻿id_client,state_name,first_name,gender,job_title
+1,TX,Domingo,male,Structural Analysis Engineer
+2,MI,Russell,male,Speech Pathologist
+3,AL,Kimble,male,Account Coordinator
+4,IL,Barnabas,male,General Manager
+5,MN,Tanney,female,VP Marketing
+6,VA,Launce,male,Automation Specialist I
+7,CO,Adham,male,Project Manager
+8,TX,Dante,male,Geological Engineer
+9,PA,Hi,female,Senior Cost Accountant
+10,CA,Carmine,female,Statistician II
+11,NC,Waring,female,Software Consultant
+12,CA,Cori,female,Senior Sales Associate
+13,TX,Rodge,genderfluid,Health Coach III
+14,TX,Nikolos,male,Geologist III
+15,DC,Guy,female,Senior Cost Accountant
+16,TX,Anton,male,Media Manager II
+17,VA,Willem,female,Media Manager II
+18,OH,Timothy,female,Marketing Manager
+19,MD,Sheridan,male,Assistant Manager
+20,LA,Kalil,genderfluid,Senior Editor
+21,LA,Augusto,female,Research Nurse
+22,LA,Duffie,female,Information Systems Manager
+23,FL,Clyde,female,Dental Hygienist
+24,GA,Harcourt,female,Web Designer III
+25,LA,Elwyn,male,Senior Developer
+26,LA,Desmund,female,Senior Sales Associate
+27,TX,Emelen,male,Project Manager
+28,MI,Mattheus,female,Pharmacist
+29,MI,Jonas,male,Cost Accountant
+30,OH,Moishe,female,Human Resources Assistant III
+31,NE,Reinwald,male,Sales Representative
+32,CA,Tobin,male,Food Chemist
+33,FL,Bo,male,VP Product Management
+34,WA,Sherm,male,Senior Financial Analyst
+35,VA,Mile,male,Occupational Therapist
+36,TX,Turner,male,Automation Specialist IV
+37,ND,Cornie,genderqueer,Editor
+38,PA,Rab,male,Assistant Manager
+39,MA,Codie,female,Financial Analyst
+40,OR,Scott,female,Civil Engineer
+41,MS,Hilary,male,Design Engineer
+42,CA,Keir,female,Senior Editor
+43,TX,Raffarty,male,General Manager
+44,CA,Federico,non-binary,Nurse Practicioner
+45,FL,Karlan,female,Financial Advisor
+46,PA,Demetris,female,Programmer Analyst IV
+47,AZ,Lisle,female,Web Designer I
+48,MS,Rabi,genderfluid,Director of Sales
+49,NY,Jareb,male,Sales Associate
+50,NV,Sergent,male,Geologist II
+51,NY,Reinaldo,female,Editor
+52,OR,Zebadiah,female,Desktop Support Technician
+53,DC,Shurlock,polygender,Junior Executive
+54,WV,Chip,agender,Recruiting Manager
+55,TX,Alford,female,Human Resources Assistant I
+56,MO,Marius,male,Senior Cost Accountant
+57,MA,Marmaduke,non-binary,Sales Associate
+58,NV,Emlyn,female,Business Systems Development Analyst
+59,NY,Frederich,female,Health Coach II
+60,CA,Davidde,male,VP Marketing
+61,CA,Angus,female,Senior Sales Associate
+62,CA,Cchaddie,male,Business Systems Development Analyst
+63,AR,Fons,female,Senior Developer
+64,SD,Lucio,female,Web Developer IV
+65,CA,Wolf,male,Recruiting Manager
+66,LA,Lazare,male,Associate Professor
+67,KY,Cornelius,male,Recruiting Manager
+68,OR,Matteo,bigender,Social Worker
+69,CA,Domingo,female,Recruiter
+70,PA,Bordie,male,Sales Associate
+71,CA,Neil,female,Geologist IV
+72,TX,Allistir,female,Chief Design Engineer
+73,DC,Rafe,genderfluid,Senior Editor
+74,NE,Galvan,male,Teacher
+75,LA,Dionysus,female,Legal Assistant
+76,TX,Raul,male,Speech Pathologist
+77,CT,Codie,female,Media Manager I
+78,DC,Zeke,female,Research Associate
+79,FL,Siegfried,female,VP Product Management
+80,CT,Les,female,Junior Executive
+81,IL,Kilian,male,Design Engineer
+82,NC,Donall,male,Web Developer III
+83,CA,Hershel,male,Nurse
+84,IL,Demetris,male,Social Worker
+85,DC,Kennan,female,Project Manager
+86,FL,Gilburt,female,Community Outreach Specialist
+87,ID,Ruttger,male,Chief Design Engineer
+88,CA,Fransisco,female,Design Engineer
+89,TX,Reade,female,General Manager
+90,FL,Weylin,male,Engineer I
+91,FL,Riobard,male,Technical Writer
+92,IN,Ambrosi,male,Analyst Programmer
+93,VA,Norris,genderqueer,Business Systems Development Analyst
+94,CA,Lorens,female,Staff Accountant IV
+95,IL,Denis,female,VP Product Management
+96,OH,Rhett,female,Biostatistician IV
+97,AL,Hamlin,male,Media Manager I
+98,PA,Sebastien,male,Media Manager III
+99,CA,Dewey,female,Executive Secretary
+100,AL,Renault,agender,Biostatistician IV
+101,CA,Blayne,female,Software Engineer IV
+102,NY,Mendy,male,Web Designer III
+103,NY,Finley,male,Associate Professor
+104,MN,Tynan,male,VP Sales
+105,TX,Christoph,female,Quality Control Specialist
+106,IN,Vassili,male,Chemical Engineer
+107,WA,Titos,male,Nuclear Power Engineer
+108,NC,Turner,female,Developer IV
+109,OH,Kyle,male,Actuary
+110,TX,Yehudi,genderfluid,Project Manager
+111,VA,Adams,female,Clinical Specialist
+112,TX,Ingemar,genderqueer,Account Coordinator
+113,DC,Bartolomeo,male,Executive Secretary
+114,IN,Lennard,female,Administrative Assistant II
+115,AZ,Ralf,female,Senior Quality Engineer
+116,CA,Marten,non-binary,Web Developer IV
+117,GA,Portie,female,Teacher
+118,IL,Jacob,male,Teacher
+119,NC,Joaquin,male,Product Engineer
+120,NY,Dougy,male,Computer Systems Analyst IV
+121,OH,Bartel,female,Actuary
+122,KS,Inigo,female,Programmer Analyst II
+123,VA,Ross,male,Analog Circuit Design manager
+124,DC,Saul,female,VP Marketing
+125,CA,Bary,female,Technical Writer
+126,NJ,Anatol,male,Sales Representative
+127,MI,Gaspard,male,Automation Specialist I
+128,NY,Kirk,male,Nuclear Power Engineer
+129,LA,Jamill,female,Cost Accountant
+130,FL,Angel,female,Quality Engineer
+131,AR,Harley,female,Associate Professor
+132,CT,Alex,male,VP Product Management
+133,DC,Averill,female,Assistant Professor
+134,VA,Christy,female,Research Associate
+135,VA,Chrisse,male,Technical Writer
+136,FL,Edgar,polygender,Biostatistician IV
+137,IN,Swen,agender,Pharmacist
+138,OR,Obadiah,male,Office Assistant II
+139,MA,Reilly,female,Nurse
+140,PA,Baron,female,Safety Technician III
+141,OH,Britt,male,Accounting Assistant III
+142,TX,Raimondo,male,Administrative Assistant IV
+143,CA,Trip,female,Data Coordinator
+144,UT,Teddy,male,Payment Adjustment Coordinator
+145,NJ,Justino,female,Teacher
+146,FL,Con,male,Operator
+147,MA,Claiborne,female,Dental Hygienist
+148,ID,Harold,female,Sales Associate
+149,TX,Raynard,female,Environmental Specialist
+150,DC,Boothe,male,Marketing Manager
+151,KS,Cornie,male,Engineer II
+152,HI,Teador,female,Assistant Media Planner
+153,TN,Nial,male,Help Desk Technician
+154,NJ,Talbot,male,VP Marketing
+155,DC,Karlens,male,Desktop Support Technician
+156,FL,Ross,male,Senior Financial Analyst
+157,TX,Dale,female,Senior Cost Accountant
+158,IL,Jarib,genderfluid,Food Chemist
+159,PA,Adolphe,female,Database Administrator II
+160,IL,Godard,female,Senior Editor
+161,NC,Dietrich,male,Paralegal
+162,DC,Reuven,female,Media Manager IV
+163,MD,Tadd,female,Electrical Engineer
+164,VA,Marius,female,Safety Technician III
+165,AL,Ricoriki,male,Sales Representative
+166,IN,Courtnay,male,Quality Engineer
+167,KS,Melvin,male,Senior Quality Engineer
+168,TX,Nicol,male,Director of Sales
+169,AL,Seward,female,Editor
+170,NY,Tremain,female,Executive Secretary
+171,UT,Fairleigh,male,Desktop Support Technician
+172,DC,Lambert,agender,Chemical Engineer
+173,NY,Jacob,male,Senior Financial Analyst
+174,OK,Pip,male,Chief Design Engineer
+175,OR,Murvyn,female,Safety Technician IV

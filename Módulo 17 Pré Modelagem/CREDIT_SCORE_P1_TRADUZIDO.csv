@@ -1,0 +1,165 @@
+﻿IDADE,GÊNERO,RENDA,EDUCAÇÃO,ESTADO CIVIL,NÚMERO DE CRIANÇAS,PROPRIEDADE DE CASA,CREDIT SCORE
+25.0,Fêmea,"50.000,00",Diploma de bacharel,Solteiro,0,Alugado,Alto
+30.0,Macho,"100.000,00",Mestrado,Casado,2,Controlado,Alto
+35.0,Fêmea,"75.000,00",Doutorado,Casado,1,Controlado,Alto
+40.0,Macho,"125.000,00",Diploma de ensino médio,Solteiro,0,Controlado,Alto
+45.0,Fêmea,"100.000,00",Diploma de bacharel,Casado,3,Controlado,Alto
+50.0,Macho,"150.000,00",Mestrado,Casado,0,Controlado,Alto
+26.0,Fêmea,"40.000,00",Grau de Associado,Solteiro,0,Alugado,Média
+31.0,Macho,"60.000,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+,Fêmea,"80.000,00",Mestrado,Casado,2,Controlado,Alto
+,Macho,"105.000,00",Doutorado,Solteiro,0,Controlado,Alto
+,Fêmea,"90.000,00",Diploma de ensino médio,Casado,1,Controlado,Alto
+,Macho,"135.000,00",Diploma de bacharel,Casado,0,Controlado,Alto
+,Fêmea,"35.000,00",Diploma de ensino médio,Solteiro,0,Alugado,Baixo
+,Macho,"55.000,00",Grau de Associado,Solteiro,0,Alugado,Média
+,Fêmea,"70.000,00",Diploma de bacharel,Casado,2,Controlado,Alto
+,Macho,"95.000,00",Mestrado,Solteiro,0,Controlado,Alto
+,Fêmea,"85.000,00",Doutorado,Casado,1,Controlado,Alto
+,Macho,"125.000,00",Diploma de ensino médio,Casado,0,Controlado,Alto
+,Fêmea,"30.000,00",Grau de Associado,Solteiro,0,Alugado,Baixo
+,Macho,"50.000,00",Diploma de ensino médio,Solteiro,0,Alugado,Média
+,Fêmea,"65.000,00",Diploma de bacharel,Casado,2,Controlado,Alto
+43.0,Macho,"80.000,00",Mestrado,Solteiro,0,Controlado,Alto
+48.0,Fêmea,"70.000,00",Doutorado,Casado,1,Controlado,Alto
+53.0,Macho,"115.000,00",Grau de Associado,Casado,0,Controlado,Alto
+29.0,Fêmea,"25.000,00",Diploma de ensino médio,Solteiro,0,Alugado,Baixo
+34.0,Macho,"45.000,00",Grau de Associado,Solteiro,0,Alugado,Média
+39.0,Fêmea,"60.000,00",Diploma de bacharel,Casado,2,Controlado,Alto
+44.0,Macho,"75.000,00",Mestrado,Solteiro,0,Controlado,Alto
+49.0,Fêmea,"65.000,00",Doutorado,Casado,1,Controlado,Alto
+25.0,Fêmea,"55.000,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+30.0,Macho,"105.000,00",Mestrado,Casado,2,Controlado,Alto
+35.0,Fêmea,"80.000,00",Doutorado,Casado,1,Controlado,Alto
+40.0,Macho,"130.000,00",Diploma de ensino médio,Solteiro,0,Controlado,Alto
+45.0,Fêmea,"105.000,00",Diploma de bacharel,Casado,3,Controlado,Alto
+50.0,Macho,"155.000,00",Mestrado,Casado,0,Controlado,Alto
+26.0,Fêmea,"45.000,00",Grau de Associado,Solteiro,0,Alugado,Média
+31.0,Macho,"65.000,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+36.0,Fêmea,"85.000,00",Mestrado,Casado,2,Controlado,Alto
+41.0,Macho,"110.000,00",Doutorado,Solteiro,0,Controlado,Alto
+46.0,Fêmea,"95.000,00",Diploma de ensino médio,Casado,1,Controlado,Alto
+51.0,Macho,"140.000,00",Diploma de bacharel,Casado,0,Controlado,Alto
+27.0,Fêmea,"37.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Baixo
+32.0,Macho,"57.500,00",Grau de Associado,Solteiro,0,Alugado,Média
+37.0,Fêmea,"72.500,00",Diploma de bacharel,Casado,2,Controlado,Alto
+42.0,Macho,"100.000,00",Mestrado,Solteiro,0,Controlado,Alto
+47.0,Fêmea,"90.000,00",Doutorado,Casado,1,Controlado,Alto
+52.0,Macho,"130.000,00",Diploma de ensino médio,Casado,0,Controlado,Alto
+28.0,Fêmea,"32.500,00",Grau de Associado,Solteiro,0,Alugado,Baixo
+33.0,Macho,"52.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Média
+38.0,Fêmea,"67.500,00",Diploma de bacharel,Casado,2,Controlado,Alto
+43.0,Macho,"92.500,00",Mestrado,Solteiro,0,Controlado,Alto
+48.0,Fêmea,"82.500,00",Doutorado,Casado,1,Controlado,Alto
+53.0,Macho,"122.500,00",Grau de Associado,Casado,0,Controlado,Alto
+29.0,Fêmea,"27.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Baixo
+34.0,Macho,"47.500,00",Grau de Associado,Solteiro,0,Alugado,Média
+39.0,Fêmea,"62.500,00",Diploma de bacharel,Casado,2,Controlado,Alto
+44.0,Macho,"87.500,00",Mestrado,Solteiro,0,Controlado,Alto
+49.0,Fêmea,"77.500,00",Doutorado,Casado,1,Controlado,Alto
+25.0,Fêmea,"57.500,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+30.0,Macho,"112.500,00",Mestrado,Casado,2,Controlado,Alto
+35.0,Fêmea,"85.000,00",Doutorado,Casado,1,Controlado,Alto
+25.0,Fêmea,"60.000,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+30.0,Macho,"117.500,00",Mestrado,Casado,2,Controlado,Alto
+35.0,Fêmea,"90.000,00",Doutorado,Casado,1,Controlado,Alto
+40.0,Macho,"142.500,00",Diploma de ensino médio,Solteiro,0,Controlado,Alto
+45.0,Fêmea,"110.000,00",Diploma de bacharel,Casado,3,Controlado,Alto
+50.0,Macho,"160.000,00",Mestrado,Casado,0,Controlado,Alto
+26.0,Fêmea,"47.500,00",Grau de Associado,Solteiro,0,Alugado,Média
+31.0,Macho,"67.500,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+36.0,Fêmea,"90.000,00",Mestrado,Casado,2,Controlado,Alto
+41.0,Macho,"115.000,00",Doutorado,Solteiro,0,Controlado,Alto
+46.0,Fêmea,"97.500,00",Diploma de ensino médio,Casado,1,Controlado,Alto
+51.0,Macho,"145.000,00",Diploma de bacharel,Casado,0,Controlado,Alto
+27.0,Fêmea,"37.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Baixo
+32.0,Macho,"57.500,00",Grau de Associado,Solteiro,0,Alugado,Média
+37.0,Fêmea,"75.000,00",Diploma de bacharel,Casado,2,Controlado,Alto
+42.0,Macho,"105.000,00",Mestrado,Solteiro,0,Controlado,Alto
+47.0,Fêmea,"95.000,00",Doutorado,Casado,1,Controlado,Alto
+52.0,Macho,"135.000,00",Diploma de ensino médio,Casado,0,Controlado,Alto
+28.0,Fêmea,"32.500,00",Grau de Associado,Solteiro,0,Alugado,Baixo
+33.0,Macho,"52.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Média
+,Fêmea,"67.500,00",Diploma de bacharel,Casado,2,Controlado,Alto
+,Macho,"92.500,00",Mestrado,Solteiro,0,Controlado,Alto
+,Fêmea,"85.000,00",Doutorado,Casado,1,Controlado,Alto
+,Macho,"125.000,00",Grau de Associado,Casado,0,Controlado,Alto
+,Fêmea,"27.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Baixo
+,Macho,"47.500,00",Grau de Associado,Solteiro,0,Alugado,Média
+,Fêmea,"62.500,00",Diploma de bacharel,Casado,2,Controlado,Alto
+,Macho,"87.500,00",Mestrado,Solteiro,0,Controlado,Alto
+,Fêmea,"77.500,00",Doutorado,Casado,1,Controlado,Alto
+,Fêmea,"57.500,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+,Macho,"112.500,00",Mestrado,Casado,2,Controlado,Alto
+,Fêmea,"85.000,00",Doutorado,Casado,1,Controlado,Alto
+25.0,Fêmea,"62.500,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+30.0,Macho,"117.500,00",Mestrado,Casado,2,Controlado,Alto
+35.0,Fêmea,"90.000,00",Doutorado,Casado,1,Controlado,Alto
+40.0,Macho,"142.500,00",Diploma de ensino médio,Solteiro,0,Controlado,Alto
+45.0,Fêmea,"115.000,00",Diploma de bacharel,Casado,3,Controlado,Alto
+50.0,Macho,"162.500,00",Mestrado,Casado,0,Controlado,Alto
+26.0,Fêmea,"50.000,00",Grau de Associado,Solteiro,0,Alugado,Média
+31.0,Macho,"70.000,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+36.0,Fêmea,"95.000,00",Mestrado,Casado,2,Controlado,Alto
+41.0,Macho,"120.000,00",Doutorado,Solteiro,0,Controlado,Alto
+46.0,Fêmea,"102.500,00",Diploma de ensino médio,Casado,1,Controlado,Alto
+51.0,Macho,"150.000,00",Diploma de bacharel,Casado,0,Controlado,Alto
+27.0,Fêmea,"37.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Baixo
+32.0,Macho,"57.500,00",Grau de Associado,Solteiro,0,Alugado,Média
+37.0,Fêmea,"77.500,00",Diploma de bacharel,Casado,2,Controlado,Alto
+42.0,Macho,"110.000,00",Mestrado,Solteiro,0,Controlado,Alto
+47.0,Fêmea,"97.500,00",Doutorado,Casado,1,Controlado,Alto
+52.0,Macho,"137.500,00",Diploma de ensino médio,Casado,0,Controlado,Alto
+28.0,Fêmea,"32.500,00",Grau de Associado,Solteiro,0,Alugado,Baixo
+33.0,Macho,"52.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Média
+38.0,Fêmea,"67.500,00",Diploma de bacharel,Casado,2,Controlado,Alto
+43.0,Macho,"95.000,00",Mestrado,Solteiro,0,Controlado,Alto
+48.0,Fêmea,"87.500,00",Doutorado,Casado,1,Controlado,Alto
+53.0,Macho,"127.500,00",Grau de Associado,Casado,0,Controlado,Alto
+29.0,Fêmea,"27.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Baixo
+34.0,Macho,"47.500,00",Grau de Associado,Solteiro,0,Alugado,Média
+39.0,Fêmea,"62.500,00",Diploma de bacharel,Casado,2,Controlado,Alto
+44.0,Macho,"87.500,00",Mestrado,Solteiro,0,Controlado,Alto
+49.0,Fêmea,"77.500,00",Doutorado,Casado,1,Controlado,Alto
+25.0,Fêmea,"57.500,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+30.0,Macho,"112.500,00",Mestrado,Casado,2,Controlado,Alto
+35.0,Fêmea,"85.000,00",Doutorado,Casado,1,Controlado,Alto
+25.0,Fêmea,"60.000,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+30.0,Macho,"117.500,00",Mestrado,Casado,2,Controlado,Alto
+35.0,Fêmea,"90.000,00",Doutorado,Casado,1,Controlado,Alto
+28.0,Macho,"75.000,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+33.0,Fêmea,"82.000,00",Mestrado,Casado,1,Controlado,Alto
+31.0,Macho,"95.000,00",Doutorado,Solteiro,0,Alugado,Alto
+26.0,Fêmea,"55.000,00",Diploma de bacharel,Casado,1,Controlado,Média
+32.0,Macho,"85.000,00",Mestrado,Solteiro,0,Alugado,Alto
+29.0,Fêmea,"68.000,00",Doutorado,Casado,2,Controlado,Média
+34.0,Macho,"105.000,00",Diploma de bacharel,Casado,1,Alugado,Alto
+25.0,Fêmea,"55.000,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+30.0,Macho,"105.000,00",Mestrado,Casado,2,Controlado,Alto
+35.0,Fêmea,"80.000,00",Doutorado,Casado,1,Controlado,Alto
+40.0,Macho,"130.000,00",Diploma de ensino médio,Solteiro,0,Controlado,Alto
+45.0,Fêmea,"105.000,00",Diploma de bacharel,Casado,3,Controlado,Alto
+50.0,Macho,"155.000,00",Mestrado,Casado,0,Controlado,Alto
+26.0,Fêmea,"45.000,00",Grau de Associado,Solteiro,0,Alugado,Média
+31.0,Macho,"65.000,00",Diploma de bacharel,Solteiro,0,Alugado,Média
+36.0,Fêmea,"85.000,00",Mestrado,Casado,2,Controlado,Alto
+,Macho,"110.000,00",Doutorado,Solteiro,0,Controlado,Alto
+,Fêmea,"95.000,00",Diploma de ensino médio,Casado,1,Controlado,Alto
+,Macho,"140.000,00",Diploma de bacharel,Casado,0,Controlado,Alto
+,Fêmea,"37.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Baixo
+,Macho,"57.500,00",Grau de Associado,Solteiro,0,Alugado,Média
+,Fêmea,"72.500,00",Diploma de bacharel,Casado,2,Controlado,Alto
+,Macho,"100.000,00",Mestrado,Solteiro,0,Controlado,Alto
+,Fêmea,"90.000,00",Doutorado,Casado,1,Controlado,Alto
+,Macho,"130.000,00",Diploma de ensino médio,Casado,0,Controlado,Alto
+28.0,Fêmea,"32.500,00",Grau de Associado,Solteiro,0,Alugado,Baixo
+33.0,Macho,"52.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Média
+38.0,Fêmea,"67.500,00",Diploma de bacharel,Casado,2,Controlado,Alto
+43.0,Macho,"92.500,00",Mestrado,Solteiro,0,Controlado,Alto
+48.0,Fêmea,"82.500,00",Doutorado,Casado,1,Controlado,Alto
+53.0,Macho,"122.500,00",Grau de Associado,Casado,0,Controlado,Alto
+29.0,Fêmea,"27.500,00",Diploma de ensino médio,Solteiro,0,Alugado,Baixo
+34.0,Macho,"47.500,00",Grau de Associado,Solteiro,0,Alugado,Média
+39.0,Fêmea,"62.500,00",Diploma de bacharel,Casado,2,Controlado,Alto
+44.0,Macho,"87.500,00",Mestrado,Solteiro,0,Controlado,Alto
+49.0,Fêmea,"77.500,00",Doutorado,Casado,1,Controlado,Alto
